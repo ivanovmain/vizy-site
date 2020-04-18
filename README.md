@@ -1,6 +1,6 @@
 # vizy-site
 
-### Ссылка проекта на GitHub Pages https://github.com/ivanovmain/vizy-site/settings
+### Ссылка проекта на GitHub Pages https://ivanovmain.github.io/vizy-site/
 
 Верстка главной страницы сайта компании. Использованы css grid, flex box, svg спрайты, scss. scss разделен на удобные компоненты и собирается в один css файл.
 
