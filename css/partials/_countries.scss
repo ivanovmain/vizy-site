@@ -1,0 +1,221 @@
+.countries{
+  background-color: #F2F2F2;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  @include media($md){
+    padding-bottom: 15px;
+  }
+}
+.countries-inner{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "nav nav form"
+  "countries countries countries";
+  padding-top: 65px;
+  grid-column-gap: 40px;
+  @include media($md){
+    grid-template-areas:
+  "form form form"
+  "nav nav nav"
+  "countries countries countries";
+  padding-top: 0;
+  }
+}
+
+.countries-nav{
+  grid-area: nav;
+}
+.countries-nav-list{
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #BDBDBD;
+  @include media($xs){
+    font-size: 1rem;
+  }
+  @include media($xxs){
+    font-size: 0.9rem;
+  }
+}
+.countries-nav-item {
+  width: 25%;
+  position: relative;
+  text-align: center;
+  @include media($xs){
+    width: auto;
+  }
+}
+.countries-nav-item-active::after{
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: #C8182F;
+  position: absolute;
+  bottom: -23px;
+  right: 0;
+}
+.search-country{
+  grid-area: form;
+  @include media($md){
+    margin-bottom: 30px;
+  }
+}
+.country-list{
+  grid-area: countries;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-row-gap: 30px;
+  grid-column-gap: 20px;
+  padding-top: 70px;
+  @include media($xs){
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  @include media($xxs){
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+    padding-left: 10px;
+  }
+
+}
+.country-item{
+  display: flex;
+  align-items: center;
+}
+.country-item img{
+  display: block;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.country-item a {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-decoration: underline;
+}
+.country-item a:hover {
+  text-decoration: none;
+  color: #C8182F;
+
+}
+.form-inner{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  width: 360px;
+  padding-left: 15px;
+  background-color: #fff;
+  @include media($xxs){
+    width: 300px;
+  }
+}
+.focus-input{
+  border: 1px solid #828282;
+}
+.country-input{
+  appearance: none;
+  border: none;
+  flex: 1;
+  outline: none;
+}
+
+.country-input::placeholder{
+  color: #BDBDBD;
+}
+.country-button{
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.search-lupa{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  color: #BDBDBD;
+}
+.focus-lupa{
+  color: #828282;
+}
+.search-lupa::after{
+  font-family: "icomoon";
+  content: "\f002";
+  position: absolute;
+  font-size: 1.25rem;
+  top: -13px;
+  right: -10px;
+}
+@-moz-document url-prefix() {
+  .search-lupa::after{
+    top: 0;
+  }
+}
+
+.popular-countries{
+  padding-top: 60px;
+}
+.countries-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  @include media(980px){
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+  }
+}
+.country-card{
+  box-sizing: border-box;
+  color: #F2F2F2;
+  width: 377px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  @include media($md){
+    width: 285px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+  }
+  @include media(980px){
+    width: 377px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media($xxs){
+    width: 100%;
+  }
+}
+.country-card-text{
+  padding-bottom: 70px;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+.country-card-sum{
+  font-size: 1.5rem;
+  display: block;
+  padding-top: 13px;
+  text-transform: lowercase;
+}
+.button-country-card{
+  margin: 0 auto;
+  @include media($md){
+    width: 200px;
+  }
+}

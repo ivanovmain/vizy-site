@@ -1,0 +1,122 @@
+.greeting{
+  width: 100%;
+  background-image: url(../../img/header-bot-bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 70px;
+}
+.h1-home{
+  max-width: 850px;
+  color: #F2F2F2;
+  padding-top: 120px;
+  padding-bottom: 140px;
+  text-align-last: left;
+  margin: 0;
+}
+.advantage-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1.5625rem;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  line-height: 1.875rem;
+  @include media($xs){
+    font-size: 1.4rem;
+  }
+  @include media($xxs){
+    font-size: 1.2rem;
+  }
+}
+.advantage-item{
+  margin-right: 20px;
+  padding-right: 60px;
+  position: relative;
+  margin-top: 35px;
+  @include media($md){
+    padding-right: 20px;
+  }
+  @include media($sm){
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    padding-right: 0;
+  }
+  @include media($xxxs){
+    width: 100%;
+  }
+  br{
+    @include media($sm){
+     display: none;
+    }
+  }
+}
+.advantage-item::after{
+  content: '';
+  background-color: #C8182F;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  @include media($sm){
+    height: 60px;
+  }
+  @include media($sm){
+    right: -30px;
+  }
+  @include media($xxxs){
+    height: 30px;
+  }
+}
+.advantage-item:last-child{
+  text-align: right;
+  border-right: transparent;
+  margin-right: 0;
+  padding-right: 0;
+  @include media($sm){
+    text-align: left;
+    margin-right: 20px;
+    padding-right: 60px;
+    padding-right: 0;
+  }
+}
+.advantage-item:last-child::after{
+  visibility: hidden;
+  @include media($sm){
+    visibility: visible;
+  }
+}
+.services{
+  padding-bottom: 70px;
+}
+
+.service-inner{
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 35px;
+  @include media($md){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($sm){
+    grid-template-columns: 1fr;
+  }
+}
+.your-benefit__inner{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 70px;
+  @include media($md){
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px 44px;
+  }
+  @include media($md){
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 40px;
+  }
+  @include media($xxs){
+    grid-template-columns: 1fr;
+  }
+}
+

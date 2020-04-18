@@ -1,0 +1,18 @@
+.arrow-button{
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #C8182F;
+  box-sizing: border-box;
+  border-radius: 5px;
+  line-height: 1.1875rem;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+
+}
+.arrow-button__text{
+  color: #C8182F;
+}

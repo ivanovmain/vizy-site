@@ -1,0 +1,348 @@
+.header{
+  padding-top: 20px;
+  @include media($md){
+    padding-top: 80px;
+  }
+  @include media($xs){
+    padding-top: 75px;
+  }
+  @include media($xxs){
+    padding-top: 76px;
+  }
+ 
+}
+.header-grid-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "city nav nav nav"
+    "logo info phone header-btn";
+  grid-gap: 25px 40px;
+  align-items: center;
+  padding-bottom: 20px;
+  @include media($md){
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 40px;
+    grid-template-areas: 
+    "burger city header-btn"
+    "logo info phone";
+  }
+  @include media($xs){
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "burger logo"
+    "city info"
+    "phone phone"
+    "header-btn header-btn";
+  }
+  @include media($xxxs){
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "burger logo"
+    "city city"
+    "info info"
+    "phone phone"
+    "header-btn header-btn";
+  }
+
+}
+.header-top-nav__list{
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  @include media($md){
+    display: none;
+  }
+
+}
+.city-select-wrapper{
+ color: #4f4f4f;
+ grid-area: city;
+ font-size: 1.125rem;
+ position: relative;
+ background-color: transparent;
+ z-index: 2;
+ text-align: right;
+ @include media($md){
+  display: none;
+ }
+
+@include media($xs){
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 160px;
+  align-self: flex-start;
+  text-align: left;
+  display: block;
+}
+@include media($xxxs){
+  margin: 0 auto;
+}
+}
+.city-select-wrapper.select-mobile{
+  text-align: left;
+  display: block;
+  .city-select{
+    padding-left: 0;
+  }
+  @media (min-width: $md) {
+    display: none;
+  }
+  @include media($xs){
+    display: none;
+  }
+}
+.burger{
+  grid-area: burger;
+  display: none;
+  cursor: pointer;
+  @include media($md){
+    display: block;
+  }
+}
+.city-select-wrapper::after{
+  font-family: 'icomoon';
+  content: '\f107';
+  position: absolute;
+  top: 1px;
+  right: 17px;
+  font-size: 1.525rem;
+  z-index: 1;
+  @include media($xs){
+   right: 24px;
+  }
+}
+.city-select-wrapper.select-mobile::after{
+  top: 6px;
+  left: 118px;
+}
+
+.city-select{
+  appearance: none;
+  border: none;
+  width: 160px;
+  background-color: transparent;
+  z-index: 3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header-logo{
+  grid-area:logo;
+  @include media($md){
+    width: 200px;
+  }
+  @include media($xs){
+    display: none;
+  }
+  
+}
+.header-logo.logo-mobile{
+  @include media($md){
+   display: none; 
+  }
+  @include media($xs){
+    display: block;
+    width: 160px;
+  }
+}
+.info-text-wrapper{
+  grid-area:info;
+  line-height: 19px;
+  font-size: 0.9375rem;
+  @include media($xxxs){
+    text-align: center;
+  }
+
+}
+.info-address{
+  margin-bottom: 14px;
+}
+.header-phone_wrapper{
+  box-sizing: border-box;
+  width: 283px;
+  grid-area:phone;
+  position: relative;
+  z-index: 1;
+  @include media($xs){
+    margin: 0 auto;
+  }
+}
+.header-phone_wrapper::after{
+  font-family: 'icomoon';
+  content: '\f107';
+  position: absolute;
+  font-size: 1.525rem;
+  z-index: 1;
+  right: 19px;
+  top: 5px;
+  @include media($md){
+    right: 22px;
+    top: 4px;
+  }
+
+}
+.header-info__phone{
+  appearance: none;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  letter-spacing: 0.005em;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  z-index: 3;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header-button{
+  grid-area: header-btn;
+  @include media($md){
+    display: none;
+  }
+  @include media($xs){
+    margin: 0 auto;
+    display: block;
+  }
+}
+.header-button.btn-mobile{
+  display: block;
+  @include media($xs){
+    display: none;
+  }
+}
+.header-bot-nav{
+  background-color:  #F2F2F2;
+  @include media($xs){
+    display: none;
+  }
+}
+.header-bot-nav__list{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 1.125rem;
+}
+.header-bot-nav__list, .mobile-item-primary{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+.header-bot-nav-item{
+  flex-shrink: 1;
+}
+.mobile-wrapper{
+  position: relative;
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+.moblile-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.moblile-header-wrapper{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #F2F2F2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+.mobile-menu{
+  transform: translateX(-100%);
+  transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+  @media (min-width: $md) {
+    display: none;
+  }
+  max-width: 420px;
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  top: 100px;
+  z-index: 999;
+  @media (max-width: $xs) {
+    top: 98px;
+  }
+  .mobile-list{
+    li{
+      background-color: #fff;
+      margin-top: 1px;
+    }
+    a{
+      display: block;
+      padding-left: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .mobile-item-primary{
+      letter-spacing: 0.06rem;
+    }
+    .mobile-item-secondary{
+      font-size: 1.125rem;
+      letter-spacing: 0.06rem;
+    }
+  }
+
+}
+#burger-m-icon{
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.burger-mob{
+  width: 58px;
+  height: 58px;
+  background-image: url(../../img/svg/burger.svg);
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  background-position: 3px 5px;
+}
+#burger-m-icon:checked ~ .mobile-wrapper .burger-mob{
+  background-image: url(../../img/svg/x.svg);
+  background-size: 60px 60px;
+  background-position: -5px -2px;
+}
+#burger-m-icon:checked ~ .mobile-wrapper .mobile-menu{
+  transform: translateX(0);
+  transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+}
+.mobile-wrapper-overlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 990;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 400ms;
+}
+#burger-m-icon:checked ~ .mobile-wrapper .mobile-wrapper-overlay{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity ease 400ms;
+}
+.xs{
+  display: none;
+  @media (max-width: $xs) {
+    display: block;
+  }
+}

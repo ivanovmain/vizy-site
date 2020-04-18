@@ -1,0 +1,130 @@
+.consult{
+  position: fixed;
+  top: 78%;
+  right: 0;
+  transform: translateX(82%);
+  box-shadow: 0px 4px 16px rgba(222, 142, 151, 0.5);
+  border-radius: 100px 0px 0px 100px;
+  display: flex;
+  transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+  background-color: #fff;
+  @include media($md){
+    transform: translateX(92%);
+  }
+  
+}
+.consult-check:checked ~ .consult{
+  transform: translateX(0);
+  transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+  
+}
+.consult-item{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 90px;
+  position: relative;
+  font-weight: bold;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 100px 0px 0px 100px;
+  width: 340px;
+  height: 100px;
+  @include media($md){
+    width: 60px;
+    span{
+      display: none;
+    }
+   } 
+}
+.consult-item::after{
+  font-family: "icomoon";
+  content: '\f095';
+  color: #C8182F;
+  font-size: 2.375rem;
+  position: absolute;
+  top: 26px;
+  left: 28px;
+}
+.consult-label{
+  cursor: pointer;
+  
+}
+.consult-check{
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+.consult-list{
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  padding-left: 75px;
+  color: #C8182F;
+  @include media($md){
+    padding-left: 5px;
+   } 
+}
+.consult-list-item{
+  padding-right: 45px;
+  padding-left: 50px;
+  position: relative;
+  @include media($md){
+    padding-right: 30px;
+   } 
+}
+.consult-list-item::after {
+  font-family: "icomoon";
+  position: absolute;
+  color: #C8182F;
+  font-size: 2.375rem;
+  left: 0;
+  top: -4px;
+}
+.consult-list-item.insta::after{
+  content: '\f16d';
+}
+.consult-list-item.call::after{
+  content: '\f095';
+}
+.consult-list-item.email::after{
+  content: '\f003';
+}
+.consult-list-item.whatsapp::after{
+  content: '\f232';
+}
+.consult-list-item.callback{
+  @include media($md){
+    padding-right: 10px;
+   } 
+}
+.consult-list-item.callback::after{
+  content: '\f2a0';
+}
+.consult-item-hidden{
+  color: #828282;
+  font-weight: 400;
+  position: absolute;
+  visibility:hidden;
+  opacity:0;
+}
+.consult-check:checked ~ .consult .consult-label .consult-item .consult-br{
+  display: none;
+}
+.consult-check:checked ~ .consult .consult-label .consult-item .consult-item-hidden{
+  visibility: visible;
+  position: static;
+  opacity: 1;
+  transition: all 800ms ease;
+}
+.consult-check:checked ~ .consult .consult-label .consult-item{
+  transition: all 800ms ease;
+}
+.consult-check:checked ~ .consult .consult-label .consult-item::after{
+  content: "\f105";
+  top: 25px;
+  transition: all 800ms ease;
+}

@@ -1,0 +1,21 @@
+//Общие
+@import "common/normalize";
+@import "common/fonts";
+@import "common/common";
+
+//Компоненты
+@import "components/buttons";
+@import "components/consult-btn";
+@import "components/card";
+@import "components/arrow-btn";
+@import "components/benefit-card";
+
+
+//Части
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/countries";
+
+//Для страниц
+@import "pages/index";

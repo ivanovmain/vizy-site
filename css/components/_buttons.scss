@@ -1,0 +1,20 @@
+.button-primary{
+  display: block;
+  border: none;
+  box-sizing: border-box;
+  width: 270px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #C8182F;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+.button-primary:hover{
+  background-color: #D95D6D;
+}

@@ -1,0 +1,12 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11" y="3" width="28" height="54" rx="2" stroke="#C8182F" stroke-width="2"/>
+<path d="M39 5H47C48.1046 5 49 5.89543 49 7V55C49 56.1046 48.1046 57 47 57H39V5Z" stroke="#C8182F" stroke-width="2"/>
+<path d="M26.3522 21.7268C25.3002 21.7118 24.4283 22.5079 24.4245 23.493L24.3496 30.0188L14.1122 35.8589L14.0775 38.2289L24.2783 35.7813L24.2093 41.8896L21.649 43.6514L21.6313 45.4341L26.1254 44.3607L28.0183 43.9043L28.0383 41.9373L28.1132 35.4115L28.1785 30.0665L28.2534 23.5407C28.2484 22.5409 27.4043 21.7418 26.3522 21.7268Z" fill="#C8182F"/>
+<line x1="12" y1="12" x2="39" y2="12" stroke="#C8182F" stroke-width="2"/>
+<line x1="39" y1="13" x2="48" y2="13" stroke="#C8182F" stroke-width="2"/>
+<line x1="23" y1="8" x2="35" y2="8" stroke="#C8182F" stroke-width="2"/>
+<line x1="39" y1="9" x2="46" y2="9" stroke="#C8182F" stroke-width="2"/>
+<line x1="33" y1="16" x2="33" y2="52" stroke="#C8182F" stroke-width="2"/>
+<line x1="44" y1="18" x2="44" y2="54" stroke="#C8182F" stroke-width="2"/>
+<line x1="15" y1="8" x2="21" y2="8" stroke="#C8182F" stroke-width="2"/>
+</svg>
