@@ -311,13 +311,13 @@
 .burger-mob{
   width: 58px;
   height: 58px;
-  background-image: url(../../img/svg/burger.svg);
+  background-image: url(../img/svg/burger.svg);
   background-repeat: no-repeat;
   background-size: 45px 45px;
   background-position: 3px 5px;
 }
 #burger-m-icon:checked ~ .mobile-wrapper .burger-mob{
-  background-image: url(../../img/svg/x.svg);
+  background-image: url(../img/svg/x.svg);
   background-size: 60px 60px;
   background-position: -5px -2px;
 }
